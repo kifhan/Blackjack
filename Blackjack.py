@@ -13,13 +13,13 @@ class Environment:
         
     def drawTables(self):
         """Creates the four tables"""
-        table1 = Image(Point(275,206.5),"table8.gif")
+        table1 = Image(Point(275,206.5),"Media/table8.gif")
         table1.draw(self.win)
-        table2 = Image(Point(825,619.5),"table8.gif")
+        table2 = Image(Point(825,619.5),"Media/table8.gif")
         table2.draw(self.win)
-        table3 = Image(Point(275,619.5),"table8.gif")
+        table3 = Image(Point(275,619.5),"Media/table8.gif")
         table3.draw(self.win)
-        table4 = Image(Point(825,206.5),"table8.gif")
+        table4 = Image(Point(825, 206.5), "Media/table8.gif")
         table4.draw(self.win)
         
     def makeDecks(self):
@@ -27,25 +27,25 @@ class Environment:
         deck1=[]
         cardValues1=[]
         for i in range(1,14):
-            deck1.append(Image(Point(0,0),"c" + str(i) + ".gif"))
+            deck1.append(Image(Point(0,0),"Media/c" + str(i) + ".gif"))
             if i<11:
                 cardValues1.append(i)
             else:
                 cardValues1.append(10)
         for i in range(1,14):
-            deck1.append(Image(Point(0,0),"d" + str(i) + ".gif"))
+            deck1.append(Image(Point(0, 0), "Media/d" + str(i) + ".gif"))
             if i<11:
                 cardValues1.append(i)
             else:
                 cardValues1.append(10)
         for i in range(1,14):
-            deck1.append(Image(Point(0,0),"h" + str(i) + ".gif"))
+            deck1.append(Image(Point(0, 0), "Media/h" + str(i) + ".gif"))
             if i<11:
                 cardValues1.append(i)
             else:
                 cardValues1.append(10)
         for i in range(1,14):
-            deck1.append(Image(Point(0,0),"s" + str(i) + ".gif"))
+            deck1.append(Image(Point(0, 0), "Media/s" + str(i) + ".gif"))
             if i<11:
                 cardValues1.append(i)
             else:
@@ -63,13 +63,13 @@ class Environment:
         deck2=list(deck1)
         deck3=list(deck1)
         deck4=list(deck1)
-        downCardOriginal=Image(Point(275,165),"back101.gif")
+        downCardOriginal=Image(Point(275,165),"Media/back101.gif")
         return deck1, deck2, deck3, deck4, downCardOriginal, cardValues1, cardValues2, cardValues3, cardValues4
 
     def makeChips(self):
         """Creates the betting chips"""
-        chip100Original = Image(Point(275,228), "chip_100blackS.gif")
-        chip10kOriginal = Image(Point(275,228), "chip_10000redS.gif")
+        chip100Original = Image(Point(275,228), "Media/chip_100blackS.gif")
+        chip10kOriginal = Image(Point(275, 228), "Media/chip_10000redS.gif")
         return chip100Original, chip10kOriginal
 
 class Blackjack:
@@ -1619,7 +1619,7 @@ def blackjack():
     downCardScore = 0
     countThreshold = 9
     dealerHit=False
-    cardOriginal=Image(Point(0,0), "back102.gif")
+    cardOriginal = Image(Point(0, 0), "Media/back102.gif")
     newGame=Blackjack(win, deck1, deck2, deck3, deck4, cardOriginal, downCardOriginal, currentCards, tempCurrentCards, tempCurrentCards2, tempCurrentCards3, tempCurrentCards4, cardValues1, cardValues2, cardValues3, cardValues4, playerHand, playerHand2, dealerHand, chip100Original, chip10kOriginal, splitOn, splitHand, doubleDown1, doubleDown2, table, moveRight, moveDown, counter1, runningCount1, runningCount2, runningCount3, runningCount4, counter2, counter3, counter4, counter1text, counter2text, counter3text, counter4text, bankroll, bankrolltext, countThreshold, hitText, standText, doubleDownText, splitText, blackjackText, playerBustText, dealerBustText, playerWinText, dealerWinText, pushText, dealerScoreText, playerScoreText, playerScore2Text, dealerScores, playerScores, playerScores2, downCardScore, dealerHit)
     newGame.startGame()
     
